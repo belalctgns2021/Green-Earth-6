@@ -1,5 +1,3 @@
-please check only this html code 
-and provide me final html code only
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +22,7 @@ and provide me final html code only
   </header>
 
   <!-- Banner / Hero Section -->
-  <section class="hero" role="banner" aria-label="Hero Section">
+  <section class="hero" aria-label="Hero Section">
     <img src="assets/hero-leaf1.png" alt="Leaves decoration left" class="hero-leaf left" />
     <div class="hero-content">
       <h1>Plant a Tree, Grow a Future</h1>
@@ -34,38 +32,35 @@ and provide me final html code only
     <img src="assets/hero-leaf2.png" alt="Leaves decoration right" class="hero-leaf right" />
   </section>
 
-  
-
-  <!-- Modal and Spinner are dynamically added by JS -->
-
- <!-- Choose Your Plant Section -->
-        <section class="shop-section" id="gallery">
-            <h2 class="shop-title">Choose Your Trees</h2>
-            <div class="shop-container">
-                <div class="categories-panel">
-                    <h3 class="panel-title">Categories</h3>
-                    <ul class="category-list" id="category-list"></ul>
-                </div>
-                <div class="trees-display-area" id="trees-display-area">
-                    <div id="loading-spinner" class="spinner-container-local">
-                        <div class="spinner"></div>
-                    </div>
-                    <div class="tree-cards-container" id="tree-cards-container"></div>
-                </div>
-                <div class="cart-panel">
-                    <h3 class="panel-title">Your Cart</h3>
-                    <div class="cart-items" id="cart-items"></div>
-                    <div class="cart-total" id="cart-total">Total: ৳0</div>
-                </div>
-            </div>
-        </section>
-        <div id="plant-modal" class="modal">
-            <div class="modal-content">
-                <span class="close-button">&times;</span>
-                <div id="modal-details"></div>
-            </div>
+  <!-- Choose Your Plant Section -->
+  <section class="shop-section" id="gallery">
+    <h2 class="shop-title">Choose Your Trees</h2>
+    <div class="shop-container">
+      <div class="categories-panel">
+        <h3 class="panel-title">Categories</h3>
+        <ul class="category-list" id="category-list"></ul>
+      </div>
+      <div class="trees-display-area" id="trees-display-area">
+        <div id="loading-spinner" class="spinner-container-local">
+          <div class="spinner"></div>
         </div>
-        
+        <div class="tree-cards-container" id="tree-cards-container"></div>
+      </div>
+      <div class="cart-panel">
+        <h3 class="panel-title">Your Cart</h3>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-total" id="cart-total">Total: ৳0</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plant Details Modal -->
+  <div id="plant-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-details">
+    <div class="modal-content">
+      <button class="close-button" aria-label="Close Modal">&times;</button>
+      <div id="modal-details"></div>
+    </div>
+  </div>
 
   <!-- About Campaign -->
   <section id="about" class="about-campaign">
@@ -132,15 +127,7 @@ and provide me final html code only
     <p>© 2025 Green Earth. All Rights Reserved.</p>
   </footer>
 
-  <!-- Modal -->
-  <div class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-body">
-    <div class="modal-content">
-      <button id="modal-close" class="modal-close" aria-label="Close Modal">&times;</button>
-      <div id="modal-body"></div>
-    </div>
-  </div>
-
-  <!-- Spinner -->
+  <!-- Global Spinner -->
   <div id="spinner" class="spinner hidden" aria-hidden="true"></div>
 
   <script src="apps.js"></script>
